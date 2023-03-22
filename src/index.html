@@ -19,12 +19,11 @@
     <meta property="og:description" content=""/>
     <meta property="og:image" content="assets/images/icon.png"/>
     <meta property="og:url" content=""/>
-
 </head>
 
 <body class="pt-5">
 <div class="container-fluid">
-    <header role="banner" class="fixed-top">
+    <header role="banner" class="fixed-top" class="bg-dark py-5">
         <nav role="navigation" aria-label="Main navigation" class="navbar navbar-expand-lg navbar-dark bg-black">
             <div class="container">
                 <a class="navbar-brand" href="/"><img style="height:55px;width:73px;" src="assets/images/icon.png" alt="icon image"></a>
@@ -51,36 +50,83 @@
         </nav>
     </header>
     <main>
-        <div class="container my-5">
-            <div class="row p-4 pb-0 pe-lg-0 pt-lg-0 align-items-center rounded-3 border shadow-lg ">
-                <div class="col-lg-7 p-3 p-lg-3 pt-lg-1">
-                    <h1 class="display-6 fw-bold lh-1">Revolutionize your teaching</h1>
-                    <p class="lead">Empower your students with cutting-edge software engineering skills. Join
-                        MyWebClass and discover advanced technologies that will transform your teaching and their
-                        learning journey.</p>
-                    <div class="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-                        <button type="button" class="btn btn-success btn-lg px-4 me-md-2 fw-bold">Start
-                            Here
-                        </button>
+        <header class="bg-black py-5">
+            <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">Get Tracking</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">A calorie tracking website allowing members to view various diet plans, learn from professionals, and ask questions with no judgement.</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-outline-light btn-lg px-5" href="story.html">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="assets/images/homepageimage.jpg" alt="image of calorie tracking on app" /></div>
                     </div>
                 </div>
-                <div class="col-lg-4 offset-lg-1 p-0 overflow-hidden shadow-lg">
-                    <img class="rounded-lg-3 img-fluid" src="assets/images/teacher.gif"
-                         alt="a teacher with students" width="720">
+        </header>
+        <section class="py-5" id="features">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-2 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Begin Tracking today!</h2></div>
+                        <div class="col-lg-8">
+                            <div class="row gx-5 row-cols-2 row-cols-md-2">
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-danger text-white rounded-4 mb-2"></div>
+                                    <h2 class="h5"><u><strong>Featured title</strong></u></h2>
+                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
+                                    <h2 class="h5"><u><strong>Featured title</strong></u></h2>
+                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                                </div>
+                                <div class="col mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
+                                    <h2 class="h5"><u><strong>Featured title</strong></u></h2>
+                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                                </div>
+                                <div class="col h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"></div>
+                                    <h2 class="h5"><u><strong>Featured title</strong></u></h2>
+                                    <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                    <!-- Testimonial section-->
+            <div class="py-5 bg-black">
+                <div class="container px-5 my-5" style="color:white">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic">"A healthy outside starts from the inside"</div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img class="rounded-circle me-3" src="assets/images/quoteimage.jpg" alt="..." />
+                                    <div class="fw-bold">
+                                        Robert Urich
+                                        <span class="fw-bold text-primary mx-1">/</span>
+                                        Influencer
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
     </main>
-    <footer class="py-5 container">
+    <footer class="bg-black text-white py-6 container-100">
         <div class="row">
-            <div class="col">
+            <div class="col" style="margin:30px;">
                 <h5>About Us</h5>
                 <ul class="nav flex-column">
                     <li class="nav-item">
                     <li class="nav-item mb-2"><a href="story.html" class="nav-link p-0 text-muted">Our
                         Story</a>
                     </li>
-
                     <a class="nav-link mb-2 p-0 text-muted active" aria-current="page" href="privacy.html">Privacy
                         Policy</a>
                     </li>
@@ -101,18 +147,6 @@
                 </ul>
             </div>
 
-
-            <div class="col-md-5 offset-md-1 mb-3">
-                <form>
-                    <h5>Subscribe to our newsletter</h5>
-                    <p>Monthly digest of what's new and exciting from us.</p>
-                    <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                        <label for="newsletter1" class="visually-hidden">Email address</label>
-                        <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                        <button class="btn btn-primary" type="button">Subscribe</button>
-                    </div>
-                </form>
-            </div>
         </div>
     </footer>
 </div>
