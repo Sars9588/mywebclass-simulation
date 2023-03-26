@@ -39,3 +39,12 @@ test('Clicking the Privacy Policy in Footer', async ({ page }) => {
   await page.click('#footer-privacypolicy')
   await expect(page).toHaveURL('http://localhost:3000/privacy.html')
 })
+
+//Test #6 (Issue #24) --> Testing the LinkedIn Button
+test('Clicking the LinkedIn in Footer', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+  await page.click('#agreeButton')
+  await page.click('#footer-linkedin')
+  await expect(page).toHaveURL('https://www.linkedin.com/')
+})
+
