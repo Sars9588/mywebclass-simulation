@@ -16,10 +16,18 @@ test('Clicking the Learning More Button', async ({ page }) => {
   await expect(page).toHaveURL('http://localhost:3000/story.html')
 })
 
-//Test #3 (Issue #20) --> Testng the Logo Button Click
+//Test #3 (Issue #21) --> Testing the Logo Button Click
 test('Clicking the Logo in Nav Bar', async ({ page }) => {
   await page.goto('http://localhost:3000')
   await page.click('#agreeButton')
   await page.click('.navbar-brand')
   await expect(page).toHaveURL('http://localhost:3000')
+})
+
+//Test #4 (Issue #22) --> Testing the Our Story Footer
+test('Clicking the Our Story in Footer', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+  await page.click('#agreeButton')
+  await page.click('#footer-ourstory')
+  await expect(page).toHaveURL('http://localhost:3000/story.html')
 })
