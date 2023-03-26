@@ -10,9 +10,16 @@ test('Should have MyWebClass.org title', async ({ page }) => {
 
 //Test #2 (Issue #20) --> Testng the Learn More Button
 test('Clicking the Learning More Button', async ({ page }) => {
-  // Expect a title "to contain" a substring.
   await page.goto('http://localhost:3000')
   await page.click('#agreeButton')
   await page.click('text=Learn More')
   await expect(page).toHaveURL('http://localhost:3000/story.html')
+})
+
+//Test #3 (Issue #20) --> Testng the Logo Button Click
+test('Clicking the Logo in Nav Bar', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+  await page.click('#agreeButton')
+  await page.click('.navbar-brand')
+  await expect(page).toHaveURL('http://localhost:3000')
 })
