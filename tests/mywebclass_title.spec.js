@@ -63,3 +63,11 @@ test('Clicking the Facebook in Footer', async ({ page }) => {
   await page.click('#footer-facebook')
   await expect(page).toHaveURL('https://www.facebook.com/')
 })
+
+//Test #9 (Issue #28) --> Testing the Our Story Button NavBar
+test('Clicking the Our Story in NavBar', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+  await page.click('#agreeButton')
+  await page.click('#navbar-OurStory')
+  await expect(page).toHaveURL('http://localhost:3000/story.html')
+})
