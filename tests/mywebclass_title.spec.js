@@ -31,3 +31,11 @@ test('Clicking the Our Story in Footer', async ({ page }) => {
   await page.click('#footer-ourstory')
   await expect(page).toHaveURL('http://localhost:3000/story.html')
 })
+
+//Test #5 (Issue #23) --> Testing the Privacy Policy Footer
+test('Clicking the Privacy Policy in Footer', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+  await page.click('#agreeButton')
+  await page.click('#footer-privacypolicy')
+  await expect(page).toHaveURL('http://localhost:3000/privacy.html')
+})
