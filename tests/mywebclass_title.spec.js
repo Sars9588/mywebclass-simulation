@@ -56,7 +56,7 @@ test('Clicking the Twitter in Footer', async ({ page }) => {
   await expect(page).toHaveURL('https://twitter.com/')
 })
 
-//Test #8 (Issue #25) --> Testing the Facebook Button
+//Test #8 (Issue #27) --> Testing the Facebook Button
 test('Clicking the Facebook in Footer', async ({ page }) => {
   await page.goto('http://localhost:3000')
   await page.click('#agreeButton')
