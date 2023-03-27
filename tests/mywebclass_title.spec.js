@@ -79,3 +79,10 @@ test('Clicking the Privacy Policy in NavBar', async ({ page }) => {
   await page.click('#navbar-PrivacyPolicy')
   await expect(page).toHaveURL('http://localhost:3000/privacy.html')
 })
+
+//Test #11 (Issue #30) --> Testing the GetTracking Text Present
+test('Testing the GetTracking Text Visible', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+  await page.click('#agreeButton')
+  await expect(page.locator('#JumboHeader')).toHaveText('GetTracking');
+})
