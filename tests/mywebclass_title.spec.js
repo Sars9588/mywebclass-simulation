@@ -133,3 +133,11 @@ test('Testing Our Story Page Title', async ({ page }) => {
   await page.click('#agreeButton')
   await expect(page.locator('#title')).toHaveText('Our Story');
 })
+
+//Test #18 (Issue #37) --> Testing Our Story - Get Tracking in Navigation
+test('Testing Our Story in Navigation', async ({ page }) => {
+  await page.goto('http://localhost:3000/story.html')
+  await page.click('#agreeButton')
+  const pageTitle = "Our Story - Get Tracking"
+  await expect(page.locator('#pageTitleNav')).toHaveText(pageTitle);
+})
