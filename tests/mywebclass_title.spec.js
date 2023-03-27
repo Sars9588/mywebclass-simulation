@@ -86,3 +86,10 @@ test('Testing the GetTracking Text Visible', async ({ page }) => {
   await page.click('#agreeButton')
   await expect(page.locator('#JumboHeader')).toHaveText('GetTracking');
 })
+
+//Test #12 (Issue #31) --> Testing the Learn More Button Text
+test('Testing the Learn More Button Text', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+  await page.click('#agreeButton')
+  await expect(page.locator('#learnMoreText')).toHaveText('Learn More');
+})
