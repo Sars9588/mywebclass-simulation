@@ -155,3 +155,10 @@ test('Testing if Values Present in Our Story', async ({ page }) => {
   await page.click('#agreeButton')
   await expect(page.locator('#valuesSubTitle')).toHaveText("Values");
 })
+
+//Test #21 (Issue #41) --> Checking Webpage Title for Privacy Policy - Get Tracking
+test('Should have Privacy Policy - Get Tracking title', async ({ page }) => {
+  // Expect a title "to contain" a substring.
+  await page.goto('http://localhost:3000/privacy.html')
+  await expect(page).toHaveTitle('Privacy Policy - Get Tracking')
+})
