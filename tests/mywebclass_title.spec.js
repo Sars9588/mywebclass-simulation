@@ -107,5 +107,7 @@ test('Checking if Main Image is Present on Homepage', async ({ page }) => {
   //await page.click('#agreeButton')
   //await expect(page).toHaveScreenshot('homepageimage-4309ec7b54c81b41fb8a.jpg');
   const image = await page.$('img[src="assets/images/homepageimage-4309ec7b54c81b41fb8a.jpg"]');
+  const image2 = await page.$('img[src="c184c34a5618ab94fabf.jfif"]');
   expect(image).not.toBeNull();
+  expect(image2).not.toBeNull();
 })
