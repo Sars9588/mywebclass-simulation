@@ -171,8 +171,86 @@ test('Testing Privacy Policy Author', async ({ page }) => {
 })
 
 //Test #23 (Issue #43) --> Testing Privacy Policy Important Notice
-test('Testing Privacy Policy Author', async ({ page }) => {
+test('Testing Privacy Policy Important Notice', async ({ page }) => {
   await page.goto('http://localhost:3000/privacy.html')
   await page.click('#agreeButton')
   await expect(page.locator('#topNotice')).toHaveText("IMPORTANT NOTICE");
 })
+
+//Test #24 (Issue #44) --> Testing Privacy Policy Main Header
+test('Testing Privacy Policy Main Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#mainHeader')).toHaveText("Privacy Policy");
+})
+
+//Test #25 (Issue #45) --> Testing Privacy Policy Personal Data Header
+test('Testing Privacy Policy Personal Data Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#personalData')).toHaveText("How We Collect and Use Personal Data");
+})
+
+//Test #26 (Issue #46) --> Testing Privacy Policy Disclose Data
+test('Testing Privacy Policy Disclose Data Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#discloseData')).toHaveText("How We Disclose Personal Data");
+})
+
+//Test #27 (Issue #47) --> Testing Privacy Policy Legal Basis
+test('Testing Privacy Policy Legal Basis Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#legalBasis')).toHaveText("Legal Basis for Processing");
+})
+
+//Test #28 (Issue #48) --> Testing Privacy Policy Consent Basis
+test('Testing Privacy Policy Consent Basis Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#consentBasis')).toHaveText("Consent as a Basis for Processing");
+})
+
+//Test #29 (Issue #49) --> Testing Privacy Policy Google Analytics
+test('Testing Privacy Policy Google Analytics Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#googleAnalytics')).toHaveText("Google Analytics");
+})
+
+//Test #30 (Issue #50) --> Testing Privacy Policy Data Retention
+test('Testing Privacy Policy Data Retention Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#dataRetention')).toHaveText("Data retention and security");
+})
+
+//Test #31 (Issue #51) --> Testing Privacy Policy Information Protection
+test('Testing Privacy Policy Information Protection Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#informationProtection')).toHaveText("Information Protection");
+})
+
+//Test #32 (Issue #52) --> Testing Privacy Policy Your Rights
+test('Testing Privacy Policy Your Rights Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#yourRight')).toHaveText("Your rights");
+})
+
+//Test #33 (Issue #53) --> Testing Privacy Policy Changes
+test('Testing Privacy Policy Changes Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#changes')).toHaveText("Changes to this Privacy Policy");
+})
+
+//Test #34 (Issue #54) --> Testing Privacy Policy Contact us
+test('Testing Privacy Policy Contact Us Header', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#contactUs')).toHaveText("Contact us");
+})
+
