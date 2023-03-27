@@ -254,3 +254,10 @@ test('Testing Privacy Policy Contact Us Header', async ({ page }) => {
   await expect(page.locator('#contactUs')).toHaveText("Contact us");
 })
 
+//Test #35 (Issue #55) --> Testing Privacy Policy Footer Present
+test('Testing Privacy Policy Footer Visible', async ({ page }) => {
+    await page.goto('http://localhost:3000/privacy.html');
+    await page.click('#agreeButton')
+    const footer = await page.$('footer');
+    expect(footer).not.toBeNull();
+})
