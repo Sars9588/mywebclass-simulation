@@ -111,3 +111,10 @@ test('Checking if Main Image is Present on Homepage', async ({ page }) => {
   expect(image).not.toBeNull();
   expect(image2).not.toBeNull();
 })
+
+//Test #15 (Issue #34) --> Checking the Author Name
+test('Checking Author Name on Homepage of Quote', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+  await page.click('#agreeButton')
+  await expect(page.locator('#authorName')).toHaveText('Joyce Meyer / American Author');
+})
