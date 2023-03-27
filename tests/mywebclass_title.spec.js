@@ -169,3 +169,10 @@ test('Testing Privacy Policy Author', async ({ page }) => {
   await page.click('#agreeButton')
   await expect(page.locator('#privacyPolicyAuthor')).toHaveText("GetTracking Inc.");
 })
+
+//Test #23 (Issue #43) --> Testing Privacy Policy Important Notice
+test('Testing Privacy Policy Author', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#topNotice')).toHaveText("IMPORTANT NOTICE");
+})
