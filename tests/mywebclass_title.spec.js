@@ -126,3 +126,10 @@ test('Clicking the HomepageButton in Nav Bar', async ({ page }) => {
   await page.click('#navBar-Homepage')
   await expect(page).toHaveURL('http://localhost:3000/index.html')
 })
+
+//Test #17 (Issue #36) --> Testing Our Story Page Title
+test('Testing Our Story Page Title', async ({ page }) => {
+  await page.goto('http://localhost:3000/story.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#title')).toHaveText('Our Story');
+})
