@@ -100,3 +100,12 @@ test('Begin Tracking Section Text', async ({ page }) => {
   await page.click('#agreeButton')
   await expect(page.locator('#secondSectionHomePage')).toHaveText('Begin Tracking today!');
 })
+
+//Test #14 (Issue #33) --> Checking if the Image is Present
+test('Checking if Main Image is Present on Homepage', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+  //await page.click('#agreeButton')
+  //await expect(page).toHaveScreenshot('homepageimage-4309ec7b54c81b41fb8a.jpg');
+  const image = await page.$('img[src="assets/images/homepageimage-4309ec7b54c81b41fb8a.jpg"]');
+  expect(image).not.toBeNull();
+})
