@@ -162,3 +162,10 @@ test('Should have Privacy Policy - Get Tracking title', async ({ page }) => {
   await page.goto('http://localhost:3000/privacy.html')
   await expect(page).toHaveTitle('Privacy Policy - Get Tracking')
 })
+
+//Test #22 (Issue #42) --> Testing Privacy Policy Author
+test('Testing Privacy Policy Author', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await expect(page.locator('#privacyPolicyAuthor')).toHaveText("GetTracking Inc.");
+})
