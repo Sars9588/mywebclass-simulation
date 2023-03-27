@@ -118,3 +118,11 @@ test('Checking Author Name on Homepage of Quote', async ({ page }) => {
   await page.click('#agreeButton')
   await expect(page.locator('#authorName')).toHaveText('Joyce Meyer / American Author');
 })
+
+//Test #16 (Issue #35) --> Testing Homepage Button Our Story Page
+test('Clicking the HomepageButton in Nav Bar', async ({ page }) => {
+  await page.goto('http://localhost:3000/story.html')
+  await page.click('#agreeButton')
+  await page.click('#navBar-Homepage')
+  await expect(page).toHaveURL('http://localhost:3000/index.html')
+})
