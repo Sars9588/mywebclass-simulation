@@ -261,3 +261,11 @@ test('Testing Privacy Policy Footer Visible', async ({ page }) => {
     const footer = await page.$('footer');
     expect(footer).not.toBeNull();
 })
+
+//Test #36 (Issue #56) --> Testing the Privacy Policy Clicking from Privacy Policy Page
+test('Clicking the Privacy Policy in Footer from Said Page', async ({ page }) => {
+  await page.goto('http://localhost:3000/privacy.html')
+  await page.click('#agreeButton')
+  await page.click('#footer-privacyPolicy')
+  await expect(page).toHaveURL('http://localhost:3000/privacy.html')
+})
