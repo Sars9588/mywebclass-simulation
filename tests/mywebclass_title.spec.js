@@ -93,3 +93,10 @@ test('Testing the Learn More Button Text', async ({ page }) => {
   await page.click('#agreeButton')
   await expect(page.locator('#learnMoreText')).toHaveText('Learn More');
 })
+
+//Test #13 (Issue #32) --> Begin Tracking Section Text
+test('Begin Tracking Section Text', async ({ page }) => {
+  await page.goto('http://localhost:3000')
+  await page.click('#agreeButton')
+  await expect(page.locator('#secondSectionHomePage')).toHaveText('Begin Tracking today!');
+})
